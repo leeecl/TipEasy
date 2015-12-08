@@ -6,7 +6,7 @@
 
 Submitted by: **Li Chai**
 
-Time spent: **More than 12** hours spent in total 
+Time spent: **More than 13** hours spent in total 
 
 ## User Stories
 
@@ -17,7 +17,7 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 
-* [ ] UI animations
+* [Y] UI animations 
 * [Y] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
 * [Y] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
@@ -38,8 +38,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app:
 
-The video walkthrough didn't tell us to embed navigation controller, and that might have caused a trouble when I was trying to push segue from ViewController to SettingsViewController. 
-Many times the solution wasn't that hard to figure out, but I resort to endless searches which made problems more complicated...
+- The video walkthrough didn't tell us to embed navigation controller, and that might have caused a trouble when I was trying to push segue from ViewController to SettingsViewController. 
+- Many times the solution wasn't that hard to figure out, but I resort to endless searches which made problems more complicated...
+
 
 ## License
 

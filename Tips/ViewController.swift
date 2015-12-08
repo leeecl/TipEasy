@@ -15,14 +15,16 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    weak var delegate: UITextFieldDelegate?
-    
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var billField1: UITextField!
+    @IBOutlet var secondView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,6 +54,15 @@ class ViewController: UIViewController, UITextFieldDelegate{
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
+        // Not important animation
+        UIView.animateWithDuration(0.4,animations: {
+            self.firstView.backgroundColor = UIColor.grayColor()
+        })
+        UIView.animateWithDuration(0.4,animations: {
+            self.firstView.backgroundColor = nil
+        })
+        
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -59,10 +70,6 @@ class ViewController: UIViewController, UITextFieldDelegate{
         billField.becomeFirstResponder()
     }
     
-    
-    
-    // Animation: make totalLabel scale bigger and then back
-
     @IBAction func onEditing(sender: AnyObject) {
         var tipPercentages = [0.18, 0.2, 0.22]
         let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
@@ -74,6 +81,13 @@ class ViewController: UIViewController, UITextFieldDelegate{
         // formatting the return string to be two decimal
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
+        UIView.animateWithDuration(0.4,animations: {
+            self.firstView.backgroundColor = UIColor.grayColor()
+        })
+        UIView.animateWithDuration(0.4,animations: {
+            self.firstView.backgroundColor = nil
+        })
         
     }
     
