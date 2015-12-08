@@ -8,13 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var settingBtn: UIBarButtonItem!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    weak var delegate: UITextFieldDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +32,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipPercentages = [0.18, 0.20, 0.22]
         var index: Int
@@ -41,7 +44,6 @@ class ViewController: UIViewController {
 
         }
         tipControl.selectedSegmentIndex = index
-        
         // If index changed, the calculated number shown should reflect the change
         let tipPercentage = tipPercentages[index]
         let billAmount = NSString(string: billField.text!).doubleValue
@@ -49,35 +51,38 @@ class ViewController: UIViewController {
         let total = billAmount + tip
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
+        
     }
     
-    //override func viewDidAppear(animated: Bool) {
-        
-    //    UIView.animateWithDuration(0.4, animations: 
-    //)
-    //}
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        billField.becomeFirstResponder()
+    }
     
-    @IBAction func onEditingChanged(sender: AnyObject) {
+    
+    
+    // Animation: make totalLabel scale bigger and then back
+
+    @IBAction func onEditing(sender: AnyObject) {
         var tipPercentages = [0.18, 0.2, 0.22]
         let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         
         let billAmount = NSString(string: billField.text!).doubleValue
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
-
+        
         // formatting the return string to be two decimal
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
-        
     }
-    // keyboard gone tapping somewhere else
+    
+
+    //keyboard gone tapping somewhere else
     @IBAction func onTap
         (sender: AnyObject) {
             view.endEditing(true)
     }
-    
-    
     
 
 }
