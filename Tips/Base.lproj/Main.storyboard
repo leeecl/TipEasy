@@ -104,7 +104,7 @@
                     <connections>
                         <outlet property="billField" destination="y9k-nV-h6m" id="K2g-t5-O8O"/>
                         <outlet property="firstView" destination="7nf-KY-Ivi" id="OEg-6L-ITF"/>
-                        <outlet property="secondView" destination="8bC-Xf-vdC" id="Emw-Yr-PKh"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="a7X-us-LqM"/>
                         <outlet property="settingBtn" destination="6DF-TA-8aE" id="Qe0-ss-ntI"/>
                         <outlet property="tipControl" destination="XmN-rP-7lt" id="lnF-Da-3nH"/>
                         <outlet property="tipLabel" destination="VgL-CO-AIl" id="Dmh-3F-czF"/>

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Tips
+//  TipEasy
 //
 //  Created by lesleychai on 12/6/15.
 //  Copyright © 2015 lichai. All rights reserved.
@@ -16,8 +16,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var firstView: UIView!
-    @IBOutlet weak var billField1: UITextField!
-    @IBOutlet var secondView: UIView!
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var billView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipPercentages = [0.18, 0.20, 0.22]
         var index: Int
@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
-        // Not important animation
+        // Unimportant animation
         UIView.animateWithDuration(0.4,animations: {
             self.firstView.backgroundColor = UIColor.grayColor()
         })
