@@ -29,8 +29,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
-
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<a href="http://imgur.com/fztM82l"><img src="http://i.imgur.com/fztM82l.gif" title="source: imgur.com" /></a>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -40,6 +39,7 @@ Describe any challenges encountered while building the app:
 
 - The video walkthrough didn't tell us to embed navigation controller, and that might have caused a trouble when I was trying to push segue from ViewController to SettingsViewController. 
 - Many times the solution wasn't that hard to figure out, but I resort to endless searches which made problems more complicated...
+
 
 
 ## License
