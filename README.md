@@ -6,7 +6,7 @@
 
 Submitted by: **Li Chai**
 
-Time spent: **More than 13** hours spent in total 
+Time spent: **More than 18** hours spent in total 
 
 ## User Stories
 
@@ -39,6 +39,7 @@ Describe any challenges encountered while building the app:
 
 - The video walkthrough didn't tell us to embed navigation controller, and that might have caused a trouble when I was trying to push segue from ViewController to SettingsViewController. 
 - Many times the solution wasn't that hard to figure out, but I resort to endless searches which made problems more complicated...
+- I had trouble on putting background image. It turned out I need to add the images set into Asset Catalogs. (Not just put them in the folder)
 
 
 

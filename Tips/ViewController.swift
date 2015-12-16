@@ -18,7 +18,9 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var firstView: UIView!
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var billView: UIView!
-    
+    @IBOutlet weak var bgImage: UIImageView!
+    @IBOutlet weak var bgImageView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,7 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipPercentages = [0.18, 0.20, 0.22]
         var index: Int
@@ -48,13 +50,14 @@ class ViewController: UIViewController, UITextFieldDelegate{
         tipControl.selectedSegmentIndex = index
         // If index changed, the calculated number shown should reflect the change
         let tipPercentage = tipPercentages[index]
-        let billAmount = NSString(string: billField.text!).doubleValue
+        let billText = (billField.text! as NSString).substringFromIndex(1)
+        let billAmount = (billText as NSString).doubleValue
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
-        // Unimportant animation
+        //Unimportant animation
         UIView.animateWithDuration(0.4,animations: {
             self.firstView.backgroundColor = UIColor.grayColor()
         })
@@ -73,8 +76,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBAction func onEditing(sender: AnyObject) {
         var tipPercentages = [0.18, 0.2, 0.22]
         let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
-        
-        let billAmount = NSString(string: billField.text!).doubleValue
+        let billText = (billField.text! as NSString).substringFromIndex(1)
+        let billAmount = (billText as NSString).doubleValue
         let tip = billAmount * tipPercentage
         let total = billAmount + tip
         
@@ -82,12 +85,12 @@ class ViewController: UIViewController, UITextFieldDelegate{
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
-        UIView.animateWithDuration(0.4,animations: {
-            self.firstView.backgroundColor = UIColor.grayColor()
-        })
-        UIView.animateWithDuration(0.4,animations: {
-            self.firstView.backgroundColor = nil
-        })
+//        UIView.animateWithDuration(0.4,animations: {
+//            self.firstView.backgroundColor = UIColor.grayColor()
+//        })
+//        UIView.animateWithDuration(0.4,animations: {
+//            self.firstView.backgroundColor = nil
+//        })
         
     }
     
