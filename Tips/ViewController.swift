@@ -18,14 +18,23 @@ class ViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var firstView: UIView!
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var billView: UIView!
-    @IBOutlet weak var bgImage: UIImageView!
     @IBOutlet weak var bgImageView: UIView!
+    @IBOutlet weak var tipView: UIView!
+    @IBOutlet weak var billEntryView: UIView!
+    @IBOutlet weak var billEntryField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        
+        // Prepare animation
+        self.tipView.alpha = 0
+        self.billView.alpha = 0
+        self.firstView.alpha = 0
+        self.billEntryView.alpha = 1
+        billEntryField.becomeFirstResponder()
         
     }
     
@@ -36,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipPercentages = [0.18, 0.20, 0.22]
         var index: Int
@@ -57,23 +66,28 @@ class ViewController: UIViewController, UITextFieldDelegate{
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
         
-        //Unimportant animation
-        UIView.animateWithDuration(0.4,animations: {
-            self.firstView.backgroundColor = UIColor.grayColor()
-        })
-        UIView.animateWithDuration(0.4,animations: {
-            self.firstView.backgroundColor = nil
-        })
-        
-        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        billField.becomeFirstResponder()
     }
     
+    
+    @IBAction func onEditingAnimate(sender: UITextField) {
+        // UI Animation
+        UIView.animateWithDuration(0.4, animations: {
+            self.billEntryView.alpha = 0
+            self.tipView.alpha = 1
+            self.billView.alpha = 1
+            self.firstView.alpha = 1
+        })
+        billField.text = billEntryField.text!
+        billField.becomeFirstResponder()
+        
+        
+    }
     @IBAction func onEditing(sender: AnyObject) {
+        
         var tipPercentages = [0.18, 0.2, 0.22]
         let tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
         let billText = (billField.text! as NSString).substringFromIndex(1)
