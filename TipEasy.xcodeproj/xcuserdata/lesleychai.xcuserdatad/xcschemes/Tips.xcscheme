@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8F2EE6D71C13572D00D8A223"
-               BuildableName = "Tips.app"
-               BlueprintName = "Tips"
-               ReferencedContainer = "container:Tips.xcodeproj">
+               BuildableName = "TipEasy.app"
+               BlueprintName = "TipEasy"
+               ReferencedContainer = "container:TipEasy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8F2EE6EB1C13572D00D8A223"
-               BuildableName = "TipsTests.xctest"
-               BlueprintName = "TipsTests"
-               ReferencedContainer = "container:Tips.xcodeproj">
+               BuildableName = "TipEasy.xctest"
+               BlueprintName = "TipEasyTests"
+               ReferencedContainer = "container:TipEasy.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8F2EE6F61C13572D00D8A223"
-               BuildableName = "TipsUITests.xctest"
-               BlueprintName = "TipsUITests"
-               ReferencedContainer = "container:Tips.xcodeproj">
+               BuildableName = "TipEasy.xctest"
+               BlueprintName = "TipEasyUITests"
+               ReferencedContainer = "container:TipEasy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F2EE6D71C13572D00D8A223"
-            BuildableName = "Tips.app"
-            BlueprintName = "Tips"
-            ReferencedContainer = "container:Tips.xcodeproj">
+            BuildableName = "TipEasy.app"
+            BlueprintName = "TipEasy"
+            ReferencedContainer = "container:TipEasy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F2EE6D71C13572D00D8A223"
-            BuildableName = "Tips.app"
-            BlueprintName = "Tips"
-            ReferencedContainer = "container:Tips.xcodeproj">
+            BuildableName = "TipEasy.app"
+            BlueprintName = "TipEasy"
+            ReferencedContainer = "container:TipEasy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8F2EE6D71C13572D00D8A223"
-            BuildableName = "Tips.app"
-            BlueprintName = "Tips"
-            ReferencedContainer = "container:Tips.xcodeproj">
+            BuildableName = "TipEasy.app"
+            BlueprintName = "TipEasy"
+            ReferencedContainer = "container:TipEasy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

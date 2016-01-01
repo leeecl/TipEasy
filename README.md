@@ -29,7 +29,7 @@ The following **additional** features are implemented:
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
-<a href="http://imgur.com/fztM82l"><img src="http://i.imgur.com/fztM82l.gif" title="source: imgur.com" /></a>
+<a href="https://github.com/lesleycl/-Intro-to-iOS-Project-1---Review-my-app/blob/master/demo.gif"><img src="https://github.com/lesleycl/-Intro-to-iOS-Project-1---Review-my-app/blob/master/demo.gif" title="demo" /></a>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

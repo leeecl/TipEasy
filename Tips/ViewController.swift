@@ -49,13 +49,21 @@ class ViewController: UIViewController, UITextFieldDelegate{
         let defaults = NSUserDefaults.standardUserDefaults()
         let tipPercentages = [0.18, 0.20, 0.22]
         var index: Int
+        // First time launch app, default percentage = 0.0?
+        if defaults.doubleForKey("dftPercentage") == 0.0 {
+            index = 0
+        } else{
         for index = 0; index < tipPercentages.count; ++index{
+            print(defaults.doubleForKey("dftPercentage"))
+            print(index)
             if tipPercentages[index] == defaults.doubleForKey("dftPercentage")
             {
                 break
             }
 
         }
+        }
+        
         tipControl.selectedSegmentIndex = index
         // If index changed, the calculated number shown should reflect the change
         let tipPercentage = tipPercentages[index]

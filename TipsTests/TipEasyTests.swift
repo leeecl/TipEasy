@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Tips
+@testable import TipEasy
 
 class TipsTests: XCTestCase {
     
